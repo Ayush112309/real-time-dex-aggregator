@@ -126,3 +126,14 @@ API Endpoints:
 - WebSocket: wss://real-time-dex-aggregator-production.up.railway.app
 
 Try it now! The API is live and aggregating real-time data from multiple DEX sources.
+
+## 🎥 Video Demo
+
+Watch the live demonstration: https://youtu.be/nCisVWjv84k
+
+The video demonstrates:
+- Health check and API endpoints in action
+- Multiple rapid API requests in Postman (showcasing Redis caching speed)
+- Real-time cryptocurrency token data aggregation
+- Live deployment on Railway with Redis
+- System architecture and key features
