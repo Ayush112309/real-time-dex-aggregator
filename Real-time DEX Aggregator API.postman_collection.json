@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "d3c44bec-e845-446e-bfb4-db53e7aba99d",
+		"name": "Real-time DEX Aggregator API",
+		"description": "API for aggregating real-time cryptocurrency token data from multiple DEX sources with Redis caching",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49926592",
+		"_collection_link": "https://ch23btech11022-5840123.postman.co/workspace/ab69899f-1a9b-42d0-88e1-b41efa75518b/collection/49926592-d3c44bec-e845-446e-bfb4-db53e7aba99d?action=share&source=collection_link&creator=49926592"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://real-time-dex-aggregator-production.up.railway.app/api/health",
+					"protocol": "https",
+					"host": [
+						"real-time-dex-aggregator-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tokens",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://real-time-dex-aggregator-production.up.railway.app/api/tokens",
+					"protocol": "https",
+					"host": [
+						"real-time-dex-aggregator-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered Tokens",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "limit",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "sortBy",
+							"value": "volume",
+							"type": "text"
+						},
+						{
+							"key": "sortOrder",
+							"value": "desc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://real-time-dex-aggregator-production.up.railway.app/api/tokens?limit=10&sortBy=volume&sortOrder=desc",
+					"protocol": "https",
+					"host": [
+						"real-time-dex-aggregator-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "volume"
+						},
+						{
+							"key": "sortOrder",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Paginated Tokens",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "page",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://real-time-dex-aggregator-production.up.railway.app/api/tokens?page=1&limit=5",
+					"protocol": "https",
+					"host": [
+						"real-time-dex-aggregator-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://real-time-dex-aggregator-production.up.railway.app/api/tokens/solana_Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+					"protocol": "https",
+					"host": [
+						"real-time-dex-aggregator-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"api",
+						"tokens",
+						"solana_Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
