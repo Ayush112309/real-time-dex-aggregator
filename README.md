@@ -116,3 +116,13 @@ Deploy easily to Railway, Render, or Heroku (with Redis add-on).
 MIT © 2025 — Real-time DEX Aggregation Backend
 
 ---
+## 🚀 Live Deployment
+
+Production URL: https://real-time-dex-aggregator-production.up.railway.app
+
+API Endpoints:
+- Health Check: https://real-time-dex-aggregator-production.up.railway.app/api/health
+- Get All Tokens: https://real-time-dex-aggregator-production.up.railway.app/api/tokens
+- WebSocket: wss://real-time-dex-aggregator-production.up.railway.app
+
+Try it now! The API is live and aggregating real-time data from multiple DEX sources.
